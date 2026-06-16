@@ -35,7 +35,7 @@ drawable_textures:
   text: |
     After a long wait, we’re excited to share that it’s possible to easily draw on a texture! 
 
-    Previously, there were some hacky solutions through using a Viewport, but they were limited and costly when handling more complex tasks. For those who were comfortable dissecting and getting into the guts of the engine, RenderingDevice allowed for an even more complex solution.
+    Previously, there were some hacky solutions through using a Viewport, but they were limited and costly when handling more complex tasks. For those who were comfortable dissecting and getting into the guts of the engine, RenderingDevice allowed for an even more complex solution. (Focus on new feature)
 
     However, now we have something much more accessible: a solution in the form of ✨ [`DrawableTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_drawabletexture2d.html) ✨. It’s a simple API layer that abstracts away all the technical noise and gives users of all skill levels an approachable way to draw on textures!
   read_more: "https://github.com/godotengine/godot/pull/105701"
@@ -52,9 +52,9 @@ asset_store_update:
   text: |
     The Asset Library has been due for a refresh for a while, and with the new Asset Store and API approaching on the horizon, this was the perfect opportunity to give it some extra care and attention.
 
-    The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and now you can even zoom asset preview images. But, maybe that doesn’t catch your eye, what if we were to tell you, you can now see the asset ratings. Were you lost in a field of endless assets? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store.
+    The new update adds some changes to make browsing assets easier and more enjoyable! We’ve polished how asset items are displayed and now you can even zoom asset preview images. But, maybe that doesn’t catch your eye, what if we were to tell you, you can now see the asset ratings. Were you lost in a field of endless assets? Unsure how to navigate among the field of tall assets? Well, look no further, now from right within the store. (Verbose, can probably be compressed down into much less text)
 
-    Behind the scenes, we have also introduced threading. This means the Asset Store can perform certain tasks in the background without blocking the editor’s main user interface. That’s pretty cool. Now while you’re exploring your organized assets, you’ll also know there’s someone paving a path and clearing brush quietly in the background, making it that much easier for you to get the lay of the land.
+    Behind the scenes, we have also introduced threading. This means the Asset Store can perform certain tasks in the background without blocking the editor’s main user interface. Now while you’re exploring your organized assets, you’ll also know there’s someone paving a path and clearing brush quietly in the background, making it that much easier for you to get the lay of the land. (Can also probably be compressed a fair bit)
 
     Be sure to read our ["Introducing the Godot Asset Store"](https://godotengine.org/article/introducing-the-godot-asset-store) blog post for more details.
   read_more: "https://github.com/godotengine/godot/pull/112992"
@@ -66,7 +66,7 @@ shader_previews:
   title: "Inline previews of text-based shader operations"
   subtitle: "I don’t even see the code. All I see is fresnel, albedo, occlusion."
   text: |
-    We’ll keep going with this field imagery. Imagine you’re in a field. In the far distance, you see a lone developer, hunched over their laptop, you intuitively yell through the tall grass, “`VEC2 V4 = UV;`”!! The developer victoriously pumps their hand in the air, but in your heart you know you’ll need to see the results for yourself. You tread through the field, and at last, you arrive, gasping for air, you look over the lone developer’s shoulder to witness your creation.
+    We’ll keep going with this field imagery. Imagine you’re in a field. In the far distance, you see a lone developer, hunched over their laptop, you intuitively yell through the tall grass, “`VEC2 V4 = UV;`”!! The developer victoriously pumps their hand in the air, but in your heart you know you’ll need to see the results for yourself. You tread through the field, and at last, you arrive, gasping for air, you look over the lone developer’s shoulder to witness your creation. (Spends too much time on story instead of getting to the important feature description)
 
     With inline text shader previews, the treacherous journey is over. 
 
@@ -170,7 +170,7 @@ virtual_joystick:
   title: "Built-in virtual joystick"
   subtitle: "Break in case of emergency."
   text: |
-    Virtual joysticks are a staple of mobile gaming. From twin-stick shooters to 3D platformers, they’re featured in a large number of mobile games. However, in Godot, developers had to create their own virtual joystick system, or use an add-on that implements one.
+    Virtual joysticks are a staple of mobile gaming. From twin-stick shooters to 3D platformers, they’re featured in a large number of mobile games. However, in Godot, developers had to create their own virtual joystick system, or use an add-on that implements one. (Focuses too much on problem)
 
     This is no longer needed as Godot now provides its own VirtualJoystick node, complete with 3 operation modes: “Fixed”, “Dynamic”, and “Following”. Coupled with built-in theming abilities, this greatly speeds up the mobile development process.
   read_more: "https://github.com/godotengine/godot/pull/110933"
@@ -185,7 +185,7 @@ mesh_library_update:
   title: "Introducing the `MeshLibrary` editor"
   subtitle: "It’s like a librarian, minus the shushing."
   text: |
-    The [`GridMap`](https://docs.godotengine.org/en/4.7/classes/class_gridmap.html) node uses a [`MeshLibrary`](https://docs.godotengine.org/en/4.7/classes/class_meshlibrary.html) resource to source the tiles that can be placed. Previously, editing a `MeshLibrary` resource had to be done entirely in the inspector, which made it tedious to work with.
+    The [`GridMap`](https://docs.godotengine.org/en/4.7/classes/class_gridmap.html) node uses a [`MeshLibrary`](https://docs.godotengine.org/en/4.7/classes/class_meshlibrary.html) resource to source the tiles that can be placed. Previously, editing a `MeshLibrary` resource had to be done entirely in the inspector, which made it tedious to work with. (Spends time discussing the problem, can probably focus more on the new solution)
 
     There is now a dedicated `MeshLibrary` editor, similar to the [`TileSet`](https://docs.godotengine.org/en/4.7/classes/class_tileset.html) editor in 2D. This greatly streamlines the process of adding and editing tiles for use in a `GridMap` node.
   read_more: "https://github.com/godotengine/godot/pull/117376"
@@ -199,7 +199,7 @@ tree_drag_and_drop_update:
   text: |
     It’s now way more intuitive (and thus easier) to reorder items in [`Tree`](https://docs.godotengine.org/en/4.7/classes/class_tree.html) nodes, thanks to the new drop position indicator.
 
-    You’ll certainly appreciate this change when reordering your scene nodes in the editor.
+    You’ll certainly appreciate this change when reordering your scene nodes in the editor. (Can probably be wrapped into sentence above instead of being its own thing)
   read_more: "https://github.com/godotengine/godot/pull/112993"
   contributors:
     - name: "vaner"
@@ -210,7 +210,7 @@ export_template_dialog_update:
   title: "Only download the templates you need"
   subtitle: "You must download additional platforms."
   text: |
-    A common issue with Godot’s export system is that until now, you had to download export templates for all platforms whenever you wanted to export your project for a single platform. This led to large downloads, which not only made for a slower experience, but could also incur additional charges for people on a metered connection.
+    A common issue with Godot’s export system is that until now, you had to download export templates for all platforms whenever you wanted to export your project for a single platform. This led to large downloads, which not only made for a slower experience, but could also incur additional charges for people on a metered connection. (Spend too much time on problem, instead of just explaining solution/improvement)
 
     This is now remedied by the new export template downloader, which can download export templates for individual platforms or even specific architectures. This can reduce export template download sizes by a large factor when you only need to export to a single platform.
   read_more: "https://github.com/godotengine/godot/pull/117072"
@@ -225,7 +225,7 @@ scene_painter_tool:
   title: "2D scene painter"
   subtitle: "Use this to paint something spectacular!"
   text: |
-    Godot already offers a way to lay out scenes quickly in 2D using TileMaps and scene tiles. However, this requires some setup for projects not already using TileMaps. It is also restricted to a grid pattern, and scene tiles are not considered actual nodes that can be directly modified within the editor.
+    Godot already offers a way to lay out scenes quickly in 2D using TileMaps and scene tiles. However, this requires some setup for projects not already using TileMaps. It is also restricted to a grid pattern, and scene tiles are not considered actual nodes that can be directly modified within the editor. (Doesn't focus on solution)
 
     To remedy these limitations, Godot now offers a scene painter tool in 2D. This can be used to quickly scatter things like foliage or decorations in a 2D scene.
 
@@ -259,7 +259,7 @@ remote_scene_inspector_groups_folding:
   title: "Fold groups and subgroups in the Remote Scene Inspector"
   subtitle: "Quick! Hide!"
   text: |
-    Previously, it was possible to fold property groups and subgroups in the local inspector, but not in the remote inspector. This owes to the fact that the remote inspector is a separate implementation from the local inspector.
+    Previously, it was possible to fold property groups and subgroups in the local inspector, but not in the remote inspector. This owes to the fact that the remote inspector is a separate implementation from the local inspector. (Need to focus on solution/improvement; many users may not know or care about things being different implementations)
 
     Support for folding groups and subgroups in the remote scene inspector has been implemented. Both local and remote inspectors now support folding property groups the same way, which makes for a more seamless, consistent UX.
   read_more: "https://github.com/godotengine/godot/pull/117357"
@@ -274,7 +274,7 @@ gdextensions_view_inside_settings:
   title: "Project GDExtensions are now displayed in the project settings"
   subtitle: "GDExtensions, assemble!"
   text: |
-    Since their introduction and by their nature, GDExtensions are automatically loaded by the engine on initialization. There was unfortunately no way to know exactly which project extensions were actually present in a project, except by manually locating the project’s `.gdextension` files.
+    Since their introduction and by their nature, GDExtensions are automatically loaded by the engine on initialization. There was unfortunately no way to know exactly which project extensions were actually present in a project, except by manually locating the project’s `.gdextension` files. (Too much focus on problem)
 
     With this new feature, the project settings window has a dedicated section for GDExtensions.
   read_more: "https://github.com/godotengine/godot/pull/118063"
@@ -301,7 +301,7 @@ collapse_animation_groups:
   title: "Animation editor nodes are now collapsable"
   subtitle: "Free your mind."
   text: |
-    This feature is a blessing for animation editor power users. As soon as an animation node tracks multiple nodes, it’s easy to become overwhelmed scrolling through tracks to find the ones you need to edit.
+    This feature is a blessing for animation editor power users. As soon as an animation node tracks multiple nodes, it’s easy to become overwhelmed scrolling through tracks to find the ones you need to edit. ("This feature is a blessing" is probably something the user should judge for themselves, here we should focus on what the feature is)
 
     Collapsing unneeded nodes should relieve the tension. Especially since you can see an aggregate representation of the collapsed animation keys.
   read_more: "https://github.com/godotengine/godot/pulls?q=is%253Apr+is%253Amerged+113479+117321"
@@ -316,7 +316,7 @@ path3d_snap:
   title: "`Path3D` points can now snap to colliders"
   subtitle: "Anchor up!"
   text: |
-    Ever wondered why moving [`Path3D`](https://docs.godotengine.org/en/4.7/classes/class_path3d.html) points never seemed to snap where you wanted them to? That’s because they snap to the camera plane by default, which is essentially an imaginary flat plane at a fixed distance from the camera.
+    Ever wondered why moving [`Path3D`](https://docs.godotengine.org/en/4.7/classes/class_path3d.html) points never seemed to snap where you wanted them to? That’s because they snap to the camera plane by default, which is essentially an imaginary flat plane at a fixed distance from the camera. (Focusing on problem, not improvement)
 
     We now added an option to snap path points on colliders instead.
   read_more: "https://github.com/godotengine/godot/pull/102085"
@@ -331,7 +331,7 @@ display_enum_remote_tree:
   title: "Remote tree inspector now properly display non-exported enum variables"
   subtitle: "We could enumerate the benefits all day long if we really wanted."
   text: |
-    Prior to 4.7, the remote tree inspector had no way to distinguish normal integer variables from variables that hold a value from an enum. That’s because variable hint strings were only attributed to exported variables.
+    Prior to 4.7, the remote tree inspector had no way to distinguish normal integer variables from variables that hold a value from an enum. That’s because variable hint strings were only attributed to exported variables. (Focusing on problem, not improvement)
 
     We now fixed this, and the remote tree inspector now shows the enum name instead of its obscure integer value.
   read_more: "https://github.com/godotengine/godot/pull/115705"
@@ -347,7 +347,7 @@ picture_in_picture:
 
     With the introduction of PIP, you can render your game inside one of these little boxes. This is perfect for media players built using Godot, or for games that don’t require player input often or have long cutscenes. It enables players to keep playing while reading their emails or keeping up with their friends.
 
-    While it’s only available on the Android platform for now, this feature will hopefully make its way to other platforms soon.
+    While it’s only available on the Android platform for now, this feature will hopefully make its way to other platforms soon. (We may not want to mention other platform support until we have viable prototypes for those platforms; iOS/iPadOS specifically, I'm still very skeptical that the operating system will allow for it)
   read_more: "https://github.com/godotengine/godot/pull/114505"
   contributors:
     - name: "Fredia Huya-Kouadio"
@@ -363,7 +363,7 @@ control_transform_offset:
   text: |
     One of the most long-awaited features in Godot’s GUI system is to be able to translate, rotate, or scale a Control node without it affecting the rest of the container. This is most notably used for animation purposes, so that buttons can smoothly slide into view or fade away with a scale change.
 
-    However, Godot’s various Container nodes apply their position, rotation, and scale to their children, which means any changes made to the children’s transform is lost when the container is sorted again (which occurs when children are added, removed, or moved in the scene tree). The new transform offset properties aim to address this limitation in a self-contained manner, similar to the `transform` property in CSS.
+    However, Godot’s various Container nodes apply their position, rotation, and scale to their children, which means any changes made to the children’s transform is lost when the container is sorted again (which occurs when children are added, removed, or moved in the scene tree). The new transform offset properties aim to address this limitation in a self-contained manner, similar to the `transform` property in CSS. (Too much time on previous limitation)
 
     You can choose whether the transform offset affects mouse input. By default, transform offset is purely visual, which means there is no risk of buttons losing their hover status after being transformed.
   read_more: "https://github.com/godotengine/godot/pull/87081"
@@ -379,7 +379,7 @@ popup_search:
   title: "Filter out long `PopupMenu` items with a search bar"
   subtitle: "Cut to the chase."
   text: |
-    Some features in Godot such as choosing a new class for a [`Resource`](https://docs.godotengine.org/en/4.7/classes/class_resource.html) property or selecting a language spawns tall dialogs with hundreds of options to choose from. While incremental search exists (typing some letters to highlight the first match), it’s difficult to discover and is not usable on a touch screen.
+    Some features in Godot such as choosing a new class for a [`Resource`](https://docs.godotengine.org/en/4.7/classes/class_resource.html) property or selecting a language spawns tall dialogs with hundreds of options to choose from. While incremental search exists (typing some letters to highlight the first match), it’s difficult to discover and is not usable on a touch screen. (Too much time on limitation)
 
     [`PopupMenu`](https://docs.godotengine.org/en/4.7/classes/class_popupmenu.html) now supports optionally showing a search dialog at the top, making this functionality much easier to discover. On top of that, this also sidesteps the limitation on incremental search delay: you can take as much time as you want to type the desired search query.
   read_more: "https://github.com/godotengine/godot/pull/114236"
@@ -391,9 +391,9 @@ text_label_image_scale:
   title: "Font-size aware `RichTextLabel` images"
   subtitle: "With big fonts come big images."
   text: |
-    While [`RichTextLabel`](https://docs.godotengine.org/en/4.7/classes/class_richtextlabel.html) offers a way to adjust font and image sizes, you still need to manually set the size of images to match the text size.
+    While [`RichTextLabel`](https://docs.godotengine.org/en/4.7/classes/class_richtextlabel.html) offers a way to adjust font and image sizes, you still need to manually set the size of images to match the text size. (Initial focus is on limitation + "you still need" is present tense, should be past tense)
 
-    Thanks to this new feature, you can now resize images relative to the font size automatically. For example, `[font_size=40]Example: [img height=1em]example.png[/img][/font_size]` will render the image `example.png` at a size that matches the parent font size.
+    Thanks to this new feature, you can now resize images relative to the font size automatically. For example, `[font_size=40]Example: [img height=1em]example.png[/img][/font_size]` will render the image `example.png` at a size that matches the parent font size. (We might want a more realistic text example here, as well as a better media example)
   read_more: "https://github.com/godotengine/godot/pull/112617"
   contributors:
     - name: "Malcolm Anderson"
@@ -410,7 +410,7 @@ android_window_resize:
 
     Desktop users have been able to resize the game window to quickly test how their games behave under different aspect ratios. We are now bringing the same flexibility to the Android Editor.
 
-    The embedded game window can now be freely moved and resized, making it possible to test your game across different aspect ratios directly on your Android device.
+    The embedded game window can now be freely moved and resized, making it possible to test your game across different aspect ratios directly on your Android device. (Put feature first)
   read_more: "https://github.com/godotengine/godot/pull/118417"
   contributors:
     - name: "Anish Kumar"
@@ -426,7 +426,7 @@ one_way_collision_direction:
   text: |
     Creating one-way collisions for your platformers (and more!) is now easier than ever! With this new `one_way_collision_direction` property of `CollisionShape2D`, you’re now able to set the one-way collision direction to any direction, relative and local to the shape.
 
-    Previously, it was assumed that the one-way direction was locally up relative to the `CollisionShape2D` shape. People resorted to changing the shape itself in order to edit the one-way direction. This painful workaround is no longer needed.
+    Previously, it was assumed that the one-way direction was locally up relative to the `CollisionShape2D` shape. People resorted to changing the shape itself in order to edit the one-way direction. This painful workaround is no longer needed. (Is this paragraph necessary?)
 
     You can even make the one-way direction global (making the one-way direction constant) even if the collision shape itself rotates, using `global_transform.basis_xform_inv()`.
   read_more: "https://github.com/godotengine/godot/pull/104736"
@@ -440,7 +440,7 @@ one_way_collision_direction:
   poster: one_way_collision_direction_poster.webp
 clearcoat_update:
   title: "Clearcoat improvements and fixes"
-  subtitle: "~~Rip and tear!~~ Rise and shine!"
+  subtitle: "~~Rip and tear!~~ Rise and shine! ('Rise and shine' is a perfectly good English saying and I don't see what in the feature description would make it tie into 'rip and tear')"
   text: |
     The previous implementation of clearcoat in [`BaseMaterial3D`](https://docs.godotengine.org/en/4.7/classes/class_basematerial3d.html) had several issues, such as not implementing energy conservation. Sky reflections and reflection probes were also not taken into account.
 
@@ -472,9 +472,9 @@ clearcoat_update:
 #   poster: android_native_file_picker_poster.webp
 wayland_touch_support:
   title: "Initial touch support for Wayland"
-  subtitle: "U Can~~’t~~ Touch This"
+  subtitle: "U Can~~’t~~ Touch This (Strikethrough an apostrophe and a single letter may not read well; I think perhaps 'U _Can_ Touch This' (with 'Can' in italics) would read better)"
   text: |
-    While touch support was available on Linux/*BSD using [X11](https://en.wikipedia.org/wiki/X_Window_System), that wasn’t the case when using the newer [Wayland protocol](https://en.wikipedia.org/wiki/Wayland_(protocol)) introduced in [4.3](https://godotengine.org/releases/4.3/#display-wayland-support). Well, until now.
+    While touch support was available on Linux/*BSD using [X11](https://en.wikipedia.org/wiki/X_Window_System), that wasn’t the case when using the newer [Wayland protocol](https://en.wikipedia.org/wiki/Wayland_(protocol)) introduced in [4.3](https://godotengine.org/releases/4.3/#display-wayland-support). Well, until now. (Focus on the new functionality)
 
     While more complex touch events still need to be implemented (pan and scale gestures, long press to right click on Android), you are now able to drag windows and push buttons with your fingers.
   read_more: "https://github.com/godotengine/godot/pull/113886"
@@ -501,7 +501,7 @@ vertex_snap:
   title: "3D vertex snapping"
   subtitle: "On point."
   text: |
-    Placing meshes in a scene in the Godot editor used to be tedious. There wasn’t any way to tell it to place the edge of a level mesh flush to the tip of the one already present.
+    Placing meshes in a scene in the Godot editor used to be tedious. There wasn’t any way to tell it to place the edge of a level mesh flush to the tip of the one already present. (Focus on new functionality)
 
     But now, when holding the new Vertex Snap shortcut, the editor will highlight the nearest vertex on the selected node’s geometry. This selection can then be clicked and dragged to other vertices on other meshes.
   read_more: "https://github.com/godotengine/godot/pull/117380"
@@ -515,9 +515,9 @@ vertex_snap:
   poster: vertex_snap_poster.webp
 ignore_joypad:
   title: "Ignore controller events when your game is unfocused"
-  subtitle: "Just ignore them."
+  subtitle: "Just ignore them. (Feels a bit flat. I don't have any ideas for taglines at the moment unfortunately)"
   text: |
-    Operating systems handle gamepad input differently from keyboard and mouse input, as gamepad input is sent even when the window is unfocused. While this can be beneficial in some situations, it can lead to unintended inputs, potentially leading to accidentally exiting a game in the worst case.
+    Operating systems handle gamepad input differently from keyboard and mouse input, as gamepad input is sent even when the window is unfocused. While this can be beneficial in some situations, it can lead to unintended inputs, potentially leading to accidentally exiting a game in the worst case. (Focus on new functionality)
 
     By enabling the **Input Devices > Joypads > Ignore Joypad on Unfocused Application** project setting, you can now make Godot ignore gamepad input unless the window is focused. This setting is *disabled by default* to preserve existing behavior.
   read_more: "https://github.com/godotengine/godot/pull/115119"
@@ -542,7 +542,7 @@ project_version_discrepancies:
   title: "The Project Manager now depicts version discrepancies"
   subtitle: "Have you made a decision about upgrading? Ready to move forward into comfort and luxury?"
   text: |
-    While the Project Manager already displayed the engine version used by each project, it did not show an explicit indication that a project had to be upgraded (or downgraded) before it could be opened by the current editor version.
+    While the Project Manager already displayed the engine version used by each project, it did not show an explicit indication that a project had to be upgraded (or downgraded) before it could be opened by the current editor version. (Focus on new functionality)
 
     Thanks to this addition, an “upgrade” or “downgrade” icon is now displayed next to the version number if a project must be upgraded or downgraded before being opened. A different icon is also used for major version upgrades (i.e. opening a Godot 3 project in Godot 4).
   read_more: "https://github.com/godotengine/godot/pull/111528"
@@ -588,7 +588,7 @@ ios_sdl3:
   text: |
     One of Godot’s strengths is cross-platform controller support. However, given the large number of controllers out there, issues with incorrect mappings or non-working functionality inevitably crop up. So far, the best way to improve controller reliability has been to switch to the [SDL3 library](https://www.libsdl.org/) for input, as done on Windows, macOS, and Linux already.
 
-    By switching to the battle-tested [SDL3 library](https://wiki.libsdl.org/SDL3/FrontPage) on iOS, this fixes several issues related to controllers not being recognized properly on that platform.
+    By switching to the battle-tested [SDL3 library](https://wiki.libsdl.org/SDL3/FrontPage) on iOS, this fixes several issues related to controllers not being recognized properly on that platform. (Put this first)
   read_more: "https://github.com/godotengine/godot/pull/114316"
   contributors:
     - name: "Nintorch"
@@ -598,7 +598,7 @@ joypad_motion_sensors:
   title: "Add gyro aiming support to your project!"
   subtitle: "Aim for the open spot!"
   text: |
-    This long-awaited feature makes it possible to read accelerometer and gyroscope inputs from controllers that feature the necessary hardware. This allows for the implementation of *gyro aiming* in Godot projects, which makes for responsive yet smooth aiming by tilting the controller.
+    This long-awaited feature makes it possible to read accelerometer and gyroscope inputs from controllers that feature the necessary hardware. This allows for the implementation of *gyro aiming* in Godot projects, which makes for responsive yet smooth aiming by tilting the controller. ('This' is repeated)
   read_more: "https://github.com/godotengine/godot/pull/111679"
   contributors:
     - name: "Nintorch"
@@ -626,7 +626,7 @@ pass_unique_buffer:
 
     Modern rendering uses what we call “passes” in order to create final images that are shown on your screen. These are essentially processes that end up with a painted canvas. Some passes can draw the scene objects, while others can read the output of previous passes in order to apply some post-processing effects.
 
-    We figured out that by giving each pass their own unique environment uniform memory pool, we could speed up the rendering process. It’s all because sharing the same memory pool across passes added copy dependencies that often bottlenecked the whole process. As GPUs are meant to multiple tasks in parallel, it checks out.
+    We figured out that by giving each pass their own unique environment uniform memory pool, we could speed up the rendering process. It’s all because sharing the same memory pool across passes added copy dependencies that often bottlenecked the whole process. As GPUs are meant to multiple tasks in parallel, it checks out. (Frontload the new feature description with simpler language, then go into details in subsequent paragraphs)
   read_more: "https://github.com/godotengine/godot/pull/115177"
   contributors:
     - name: "Skyth"
@@ -636,7 +636,7 @@ mono_font_code_names:
   title: "Method, signals, and properties now use a monospaced font"
   subtitle: "It feels like home."
   text: |
-    The script editor uses a monospace font by default. In other words, every character occupies the same width, which makes it easier to compare lines of code visually.
+    The script editor uses a monospace font by default. In other words, every character occupies the same width, which makes it easier to compare lines of code visually. (This being the first line might be confusing, as people may assume this is saying the feature itself is the script editor using a monospace(d?) font by default)
 
     However, until now, the editor did not use a monospace font in locations where it displays names of methods, signals, and properties that come from scripts. This led to a visual discrepancy between what you see in the script editor and what you see elsewhere in the editor, when names coming from the scripts are visible.
 
@@ -653,7 +653,7 @@ navigate_to_script:
   title: "Reveal the current script in the list"
   subtitle: "I believe in the heart of the scripts… I will summon the current one in attack mode!"
   text: |
-    When working with a lot of open scripts, it can be challenging to find the script you’re currently working on in the list of scripts. To make this easier, you can now double-click the name of the current script at the top of the script editor to reveal the script in the list.
+    When working with a lot of open scripts, it can be challenging to find the script you’re currently working on in the list of scripts. To make this easier, you can now double-click the name of the current script at the top of the script editor to reveal the script in the list. (Focus on new feature)
   read_more: "https://github.com/godotengine/godot/pull/112796"
   contributors:
     - name: "Jin Yang"
@@ -665,7 +665,7 @@ navigate_to_script:
   poster: navigate_to_script_poster.webp
 conic_gradient:
   title: "`GradientTexture2D` now able to generate conic gradients"
-  subtitle: "POV: You just drew the Wheel of Fortune card."
+  subtitle: "POV: You just drew the Wheel of Fortune card. (I'm not sure this makes sense to me? If a Balatro reference, I don't recall Wheel of Fortune being associated with gradients, I just think of 'Nope!' Other things like the TV game show also don't really make me think of conic gradients.)"
   text: |
     [`FILL_CONIC`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html#class-gradienttexture2d-constant-fill-conic) was newly added to [`GradientTexture2D`](https://docs.godotengine.org/en/4.7/classes/class_gradienttexture2d.html), enabling the use of CSS-style effects. This is particularly useful in custom 2D shaders to simulate surfaces with realistic, 3D-like shading.
   read_more: "https://github.com/godotengine/godot/pull/115394"
@@ -679,7 +679,7 @@ tiling_atlas_texture:
   text: |
     [`AtlasTexture`](https://docs.godotengine.org/en/4.7/classes/class_atlastexture.html) allows drawing a specific *region* of a texture in 2D. This can improve performance on low-end devices by reducing texture changes, but also makes it easier to organize assets by having fewer files lying around in the project directory. However, `AtlasTexture` requires specific support in each node that wishes to make use of it.
 
-    Support for `AtlasTexture` is now available in [`TextureRect`](https://docs.godotengine.org/en/4.7/classes/class_texturerect.html), which can draw part of an `AtlasTexture` as a repeating texture for use in nine-patch texturing.
+    Support for `AtlasTexture` is now available in [`TextureRect`](https://docs.godotengine.org/en/4.7/classes/class_texturerect.html), which can draw part of an `AtlasTexture` as a repeating texture for use in nine-patch texturing. (Focus on new feature)
   read_more: "https://github.com/godotengine/godot/pull/113808"
   contributors:
     - name: "Kleonc"
@@ -729,11 +729,11 @@ view_3d_controller:
 # media: gradle_plugin.webp
 csg_smoothing:
   title: "Automatic smoothing option for CSG nodes"
-  subtitle: "You’ve been hit by… a smooth Cs’G node"
+  subtitle: "You’ve been hit by… a smooth Cs’G node (not sure what the Cs's means? I think this is generally a reference to 'You've been hit by... a smooth criminal' but I don't know why the punctuation/capitalization on CSG is different)"
   text: |
     When creating geometry with CSG nodes, they inherit the smooth/sharp faces from the original mesh data. This is not always suitable, as it can lead to curves being made of sharp faces depending on how they were constructed using CSG nodes.
 
-    Enabling the new **Autosmooth** property on a root CSG node will automatically assign smooth or sharp faces according to the **Smoothing Angle** property (which defaults to 50 degrees). Higher values will smooth faces more aggressively.
+    Enabling the new **Autosmooth** property on a root CSG node will automatically assign smooth or sharp faces according to the **Smoothing Angle** property (which defaults to 50 degrees). Higher values will smooth faces more aggressively. (Focus on new feature)
   read_more: "https://github.com/godotengine/godot/pull/116749"
   contributors:
     - name: "Jesusemora"
@@ -744,11 +744,11 @@ csg_smoothing:
   media: csg_smoothing.webp
 gdscript_java_interfaces:
   title: "Allow implementing Java interfaces from GDScript"
-  subtitle: "😂😂😂😀😶😯🤯"
+  subtitle: "😂😂😂😀😶😯🤯 (I think this is just conveying someone going from 'ha whatever' to 'huh' to 'wow this is incredible' but I feel like that could be applied to a lot of features, so a more specific tagline might be better if we can think of one)"
   text: |
     The Android team continues their work to facilitate integration and access of Android APIs in GDScript through [JavaClassWrapper and the AndroidRuntime plugin](https://docs.godotengine.org/en/4.7/tutorials/platform/android/javaclasswrapper_and_androidruntimeplugin.html).
 
-    In Godot 4.7, these capabilities have been expanded by adding support for implementing and overriding Java interfaces in GDScript.
+    In Godot 4.7, these capabilities have been expanded by adding support for implementing and overriding Java interfaces in GDScript. (Focus on new feature)
   read_more: "https://github.com/godotengine/godot/pull/115498"
   contributors:
     - name: "Fredia Huya-Kouadio"
@@ -760,7 +760,7 @@ custom_splash_screen:
   text: |
     It was previously possible to customize the native Android splash screen of your game, but it required a Gradle build and manually installing files inside the native Android resources.
 
-    You are now able to edit the splash screen settings in the Android export options.
+    You are now able to edit the splash screen settings in the Android export options. (Focus on new feature)
   read_more: "https://github.com/godotengine/godot/pull/114671"
   contributors:
     - name: "Anish Kumar"
@@ -772,7 +772,7 @@ script_editor_orientation_change:
   text: |
     One of the main usability issues of the Android Editor is script editing. While many improvements in this area are currently in progress, we’ve addressed one big issue: the fact that the on-screen keyboard takes up a large portion of the available screen space on mobile, making it difficult to work with code.
 
-    We’ve enabled changing the orientation for the Script editor. When it’s in expanded mode, you can now rotate your device to switch between portrait and landscape orientation.
+    We’ve enabled changing the orientation for the Script editor. When it’s in expanded mode, you can now rotate your device to switch between portrait and landscape orientation. (Avoid repetition of 'we'd')
 
     Many developers prefer coding in portrait mode, as it provides more vertical space and allows more lines to be visible at once. This makes navigating, reading, and writing scripts much more comfortable on mobile.
   read_more: "https://github.com/godotengine/godot/pull/117109"
@@ -804,7 +804,7 @@ vulkan_subsampled_images:
   title: "Vulkan subsampled images"
   subtitle: "Live long and subsample."
   text: |
-    This feature dramatically improves performance of foveated rendering in the Vulkan Mobile render.
+    This feature dramatically improves performance of foveated rendering in the Vulkan Mobile render. (Maybe put later, or merge into sentence focusing on new functionality?)
 
     This works by storing rendered tiles at their reduced resolution with interpolation being applied when sampling the resulting subimage, greatly decreasing memory bandwidth. Without subsampled images, foveated rendering will upscale these tiles to the full resolution when writing to texture memory.
 
@@ -814,7 +814,7 @@ vulkan_subsampled_images:
     - name: "David Snopek"
       link: "https://github.com/dsnopek"
 action_map_improvements:
-  title: "Action maps have been simplified"
+  title: "Action maps have been simplified (Be clearer that it's about XR)"
   subtitle: "“*Le contrôleur!?* What the hell is that!” no more."
   text: |
     With the introduction of support for the [OpenXR generic controller profile](https://registry.khronos.org/OpenXR/specs/1.1/html/xrspec.html#XR_KHR_generic_controller), the default [action map](https://docs.godotengine.org/en/4.7/tutorials/xr/xr_action_map.html) for new OpenXR projects has been greatly simplified.
@@ -835,7 +835,7 @@ composition_layer_improvements:
   text: |
     There are a number of improvements to the OpenXR composition layer system to give more control over how these are presented to the user.
 
-    Noteworthy improvements here are:
+    Noteworthy improvements here are: (Avoid repetition of “improvements”)
 
       - Place composition layers under the [`XRCamera3D`](https://docs.godotengine.org/en/4.7/classes/class_xrcamera3d.html) node so they are locked in the player’s view, ideal for heads-up displays.
       - The ability to place composition layer objects anywhere within your scene so they can be paired with world geometry.
@@ -852,7 +852,7 @@ composition_layer_improvements:
   title: "Rotate 3D nodes intuitively with trackball-style rotation"
   subtitle: "Look at that. Not bad at all. A big trackball indeed, itty-bitty Prince. ✨&#x2060;🌌&#x2060;🟪&#x2060;🤴&#x2060;🟪&#x2060;🌌&#x2060;✨"
   text: |
-    We’ve added a new way to rotate 3D nodes.
+    We’ve added a new way to rotate 3D nodes. (Start with what the new rotation functionality is)
 
     First of all, be sure to activate **Use Trackball** (the new planet looking icon, or just press <kbd><kbd>U</kbd></kbd>) in the 3D editor toolbar. When the transform or rotation gizmo is active, you’ll see that a translucent sphere will appear when hovering your mouse cursor inside the gizmo. If you click on that sphere and drag, you’ll rotate the model as if you were using a genuine trackball.
 
