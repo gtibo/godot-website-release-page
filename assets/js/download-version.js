@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll(".preview-download-toggle");e.forEach(e=>{const t=e.querySelector("h4");t.addEventListener("click",n=>{e.classList.contains("active")?(e.classList.remove("active"),t.textContent="Show all downloads"):(e.classList.add("active"),t.textContent="Hide all downloads")})})})
