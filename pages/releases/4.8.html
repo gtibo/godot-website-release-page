@@ -520,21 +520,12 @@ draft: false
         let quadGradientMat = MakeGradientMat("#49a7ff");
 
         const glassMat = new THREE.MeshPhysicalMaterial({  
-        roughness: 0.05,
+        roughness: 0.0,
         transmission: 0.95,  
-        thickness: 0.05,
+        thickness: 0.1,
         clearcoat: 1.0,
-        clearcoatRoughness: 0.45,
-        dispersion: 1.0,
-        });
-
-        const glassMat2 = new THREE.MeshPhysicalMaterial({  
-        roughness: 0.5,
-        transmission: 0.85,  
-        thickness: 0.2,
-        clearcoat: 1.0,
-        clearcoatRoughness: 0.6,
-        dispersion: 1.0,
+        clearcoatRoughness: 0.15,
+        dispersion: 20.0,
         });
 
         let cameraAnchor = undefined;
@@ -602,31 +593,18 @@ draft: false
         banner.events.addEventListener( "ready", () => {
             banner.scene.traverse((child)=>{
                 if (child instanceof THREE.Mesh) {
-                    if (child.name.toLowerCase().includes("lightray")){
-                        child.material = blueLightRay;
-                    }
+                    if (child.name.toLowerCase().includes("lightray")) child.material = blueLightRay;
                     if (child.name == "WorldSphereMesh") bgMesh = child;
                     if (child.name.toLowerCase().includes("backgroundgradient")) child.material = quadGradientMat;
-
-                    if (child.name.includes("PuzzlePiece")){
-                        // All PuzzlePiece should have 2 materials
-                        if(child.name.includes("Gloss")){
-                            child.material = glassMat2;
-                        }else{
-                            child.material = glassMat;
-                        }
-                    };
-
-                    
+                    if (child.name.includes("PuzzlePiece")) child.material = glassMat;
                     if (child.name == "BackgroundGradientMesh1") gradient1 = child;
                     if (child.name == "BackgroundGradientMesh2") gradient2 = child;
                     if (child.name.includes("PuzzleIcon")) {
                         child.material.transparent = false;
                         child.material.alphaTest = 0.5;
+                        child.renderOrder = 1;
                     };
-
                 }
-
                 if (child.name == "SceneHolder") sceneRoot = child;
                 if (child.name == "CameraAnchor") cameraAnchor = child;
             });
