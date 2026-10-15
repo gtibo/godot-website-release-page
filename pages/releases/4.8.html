@@ -511,18 +511,29 @@ draft: false
     <script type="module">
         import { ReleaseBanner } from "{{ site.baseurl }}/assets/js/releases/banner_update.js";
         import { MakeGradientMat } from "{{ site.baseurl }}/assets/js/releases/gradient_quad_mat.js";
+        import { MakeLightrayMat } from "{{ site.baseurl }}/assets/js/releases/lightray_mat.js";
         import { mapRange, clamp } from "{{ site.baseurl }}/assets/js/releases/math_util.js";
         import * as THREE from "{{ site.baseurl }}/assets/js/modules/three.module.min.js";
         let banner = new ReleaseBanner("#three-container", "#three-canvas");
 
+        let blueLightRay = MakeLightrayMat("#7bbbf8");
         let quadGradientMat = MakeGradientMat("#49a7ff");
 
         const glassMat = new THREE.MeshPhysicalMaterial({  
-        roughness: 0.35,
-        transmission: 0.99,  
-        thickness: 1.0,
+        roughness: 0.05,
+        transmission: 0.95,  
+        thickness: 0.05,
         clearcoat: 1.0,
-        clearcoatRoughness: 0.5,
+        clearcoatRoughness: 0.45,
+        dispersion: 1.0,
+        });
+
+        const glassMat2 = new THREE.MeshPhysicalMaterial({  
+        roughness: 0.5,
+        transmission: 0.85,  
+        thickness: 0.2,
+        clearcoat: 1.0,
+        clearcoatRoughness: 0.6,
         dispersion: 1.0,
         });
 
@@ -544,24 +555,6 @@ draft: false
         directionalLight.position.set(0.5, 1.0, 1.0);
         directionalLight.target.position.set(0.0, 0.0, 0.0);
 
-
-        /*
-        directionalLight.castShadow = true;
-        directionalLight.shadow.mapSize.width = 1024;
-        directionalLight.shadow.mapSize.height = 1024;
-
-        directionalLight.shadow.intensity = 0.8;
-        directionalLight.shadow.camera.top = 20.0;
-        directionalLight.shadow.camera.bottom = -10.0;
-        directionalLight.shadow.camera.left = 15.0;
-        directionalLight.shadow.camera.right = -15.0;
-        directionalLight.shadow.camera.far =  20.0;
-        directionalLight.shadow.camera.near =  0.0;
-        directionalLight.shadow.normalBias = 0.01;
-        directionalLight.shadow.bias = 0.01;
-
-
-        */
         banner.scene.add(directionalLight);
         banner.scene.add(directionalLight.target);
 
@@ -583,10 +576,9 @@ draft: false
             let ratioX = mapRange(ratio, 1.0, 2.0, 0.0, 1.0);
 
             if (sceneRoot) {
-                sceneRoot.position.z = mapRange(ratioX, 0.0, 1.0, -12.0, -5.0);
+                sceneRoot.position.z = mapRange(ratioX, 0.0, 1.0, -20.0, -5.0);
                 sceneRoot.position.x = mapRange(ratioX, 0.0, 1.0, 0.5, 2.5);
-                // sceneRoot.position.y = mapRange(ratioX, 0.0, 1.0, -3.0, -2.);
-                // sceneRoot.rotation.y = mapRange(ratioX, 0.0, 1.0, -Math.PI * 0.1, -Math.PI * 0.18);
+                sceneRoot.position.y = mapRange(ratioX, 0.0, 1.0, -1.0, 0.0);
             }
 
             if (gradient1) gradient1.position.x = mapRange(ratioX, 0.0, 1.0, -5.0, -10.0);
@@ -600,6 +592,7 @@ draft: false
                 this.sceneCamera.position.x = (mouseLerped.x - 0.5) * 1.0;
                 this.sceneCamera.position.y = -(mouseLerped.y - 0.5) * 1.0 - scrollPercent * 1.5;
             }
+            blueLightRay.uniforms.uTime.value = window.performance.now();
         }
 
         // Load and inject custom material on scene load.
@@ -609,16 +602,31 @@ draft: false
         banner.events.addEventListener( "ready", () => {
             banner.scene.traverse((child)=>{
                 if (child instanceof THREE.Mesh) {
-                    // if (child.name.toLowerCase().includes("plush")) child.castShadow = true;
+                    if (child.name.toLowerCase().includes("lightray")){
+                        child.material = blueLightRay;
+                    }
                     if (child.name == "WorldSphereMesh") bgMesh = child;
                     if (child.name.toLowerCase().includes("backgroundgradient")) child.material = quadGradientMat;
-                    if (child.name.includes("PuzzlePiece")) child.material = glassMat;
+
+                    if (child.name.includes("PuzzlePiece")){
+                        // All PuzzlePiece should have 2 materials
+                        if(child.name.includes("Gloss")){
+                            child.material = glassMat2;
+                        }else{
+                            child.material = glassMat;
+                        }
+                    };
 
                     
                     if (child.name == "BackgroundGradientMesh1") gradient1 = child;
                     if (child.name == "BackgroundGradientMesh2") gradient2 = child;
+                    if (child.name.includes("PuzzleIcon")) {
+                        child.material.transparent = false;
+                        child.material.alphaTest = 0.5;
+                    };
 
                 }
+
                 if (child.name == "SceneHolder") sceneRoot = child;
                 if (child.name == "CameraAnchor") cameraAnchor = child;
             });
