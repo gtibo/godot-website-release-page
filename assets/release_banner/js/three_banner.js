@@ -12,12 +12,6 @@ export class ReleaseBanner{
         this.renderer.toneMapping = THREE.ReinhardToneMapping;
         this.renderer.toneMappingExposure = 1.8;
 
-        this.renderer.shadowMap.enabled = true
-        this.renderer.shadowMap.type = THREE.PCFShadowMap
-        this.renderer.shadowMap.alias = true
-        this.renderer.shadowMap.width=1024
-        this.renderer.shadowMap.height=1024
-
         this.timer = new THREE.Timer();
         this.timer.connect( document );
 

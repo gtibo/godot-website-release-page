@@ -16,6 +16,11 @@ let gradient2 = undefined;
 let scrollPercent = 0.0;
 let mouseLerped = banner.mouse.clone();
 
+// Shadow Setup
+
+banner.renderer.shadowMap.enabled = true;
+banner.renderer.shadowMap.type = THREE.PCFShadowMap;
+
 // Light setup
 
 const ambientLight = new THREE.AmbientLight(0xFFFFFF, 2.0);
