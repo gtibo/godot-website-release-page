@@ -1,4 +1,4 @@
-import { ReleaseBanner } from "./js/banner_update.js";
+import { ReleaseBanner } from "./js/three_banner.js";
 import { MakeGradientMat } from "./js/gradient_quad_mat.js";
 import { MakeLightrayMat } from "./js/lightray_mat.js";
 import { mapRange, clamp } from "./js/math_util.js";
@@ -18,7 +18,6 @@ clearcoatRoughness: 0.15,
 dispersion: 20.0,
 });
 
-let cameraAnchor = undefined;
 let bgMesh = undefined;
 let sceneRoot = undefined;
 let gradient1 = undefined;
@@ -96,7 +95,6 @@ banner.events.addEventListener( "ready", () => {
             };
         }
         if (child.name == "SceneHolder") sceneRoot = child;
-        if (child.name == "CameraAnchor") cameraAnchor = child;
     });
     // Set bg color
     setBgColor();

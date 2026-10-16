@@ -1,4 +1,4 @@
-import { ReleaseBanner } from "./js/banner_update.js";
+import { ReleaseBanner } from "./js/three_banner.js";
 import { MakeGradientMat } from "./js/gradient_quad_mat.js";
 import { MakeLightrayMat } from "./js/lightray_mat.js";
 import { mapRange, clamp } from "./js/math_util.js";

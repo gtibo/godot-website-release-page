@@ -2,13 +2,12 @@ import * as THREE from "./three/three.module.min.js";
 import { GLTFLoader } from "./three/GLTFLoader.js";
 
 export class ReleaseBanner{
-    constructor(container_id, canvas_id){
+    constructor(container_id, canvas_id, options = {}){
         this.container = document.querySelector(container_id);
         this.canvas = document.querySelector(canvas_id);
         this.scene = new THREE.Scene();
-        // this.scene.background = new THREE.Color( 0x151515 );
 
-        this.renderer = new THREE.WebGLRenderer({antialias: true, canvas: this.canvas});
+        this.renderer = new THREE.WebGLRenderer({antialias: true, canvas: this.canvas, ...options});
         this.renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
         this.renderer.toneMapping = THREE.ReinhardToneMapping;
         this.renderer.toneMappingExposure = 1.8;
