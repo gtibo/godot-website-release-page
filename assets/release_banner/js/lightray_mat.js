@@ -1,4 +1,4 @@
-import * as THREE from "../modules/three.module.min.js";
+import * as THREE from "./three/three.module.min.js";
 
 export let MakeLightrayMat = function(lightColor){
     return new THREE.ShaderMaterial({

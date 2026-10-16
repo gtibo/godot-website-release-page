@@ -1,5 +1,5 @@
-import * as THREE from "../modules/three.module.min.js";
-import { GLTFLoader } from "../modules/GLTFLoader.js";
+import * as THREE from "./three/three.module.min.js";
+import { GLTFLoader } from "./three/GLTFLoader.js";
 
 export class ReleaseBanner{
     constructor(container_id, canvas_id){

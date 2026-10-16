@@ -1,5 +1,5 @@
-import * as THREE from "../modules/three.module.min.js";
-import { GLTFLoader } from "../modules/GLTFLoader.js";
+import * as THREE from "./three/three.module.min.js";
+import { GLTFLoader } from "./three/GLTFLoader.js";
 
 // Source - https://stackoverflow.com/a
 // Posted by Alnitak, modified by community. See post 'Timeline' for change history
@@ -235,7 +235,7 @@ var gridMat = new THREE.ShaderMaterial({
 });
 
 const gridTextureLoader = new THREE.TextureLoader();
-const texture = gridTextureLoader.load(import.meta.resolve('./3d_grid.png'), (r)=>{
+gridTextureLoader.load(import.meta.resolve('../assets/3d_grid.png'), (r)=>{
     r.wrapS = THREE.RepeatWrapping;
     r.wrapT = THREE.RepeatWrapping;
     r.minFilter = THREE.NearestFilter;
@@ -255,7 +255,7 @@ stencilMat.stencilZPass = THREE.ReplaceStencilOp;
 
 const loader = new GLTFLoader();
 
-loader.load(import.meta.resolve("./banner.glb"), function ( gltf ) {
+loader.load(import.meta.resolve("../assets/three_banner_4.6.glb"), function ( gltf ) {
     let GLBScene = gltf.scene;
     GLBScene.position.x = 2.0;
     
