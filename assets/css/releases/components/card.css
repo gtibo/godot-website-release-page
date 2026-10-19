@@ -18,6 +18,23 @@
     margin-bottom: 0.3em;
     font-weight: 600;
     line-height: 1.4em;
+    a{
+      display: inline;
+      text-decoration: none;
+      &:hover svg{
+        color: var(--color-godot-but-a-little-brighter);
+        opacity: 1.0;
+      }
+      .tail{
+        white-space: nowrap;
+      }
+      svg{
+        width: 0.6em;
+        height: 0.6em;
+        vertical-align: baseline;
+        opacity: 0.4;
+      }
+    }
   }
   .subtitle{
     font-size: 1.4em;
