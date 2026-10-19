@@ -1,0 +1,34 @@
+trail_3d:
+  title: Trail 3D
+  subtitle: subtitle
+  text: |
+    Hello World
+  read_more: "/"
+  contributors:
+    - name: "QbieShay"
+      link: "https://github.com/QbieShay"
+  media: "trail_3d.webm"
+  poster: "trail_3d_poster.webp"
+
+fuzzy_search:
+  title: Fuzzy Search
+  subtitle: subtitle
+  text: |
+    Hello World
+  read_more: "/"
+  contributors:
+    - name: "Adam Johnston"
+      link: "https://github.com/a-johnston"
+  media: "fuzzy_search.webm"
+  poster: "fuzzy_search_poster.webp"
+
+text_edit_touch_support:
+  title: Text edit touch support
+  subtitle: subtitle
+  text: |
+    Hello World
+  read_more: "/"
+  contributors:
+    - name: "Anish Kumar"
+      link: "https://github.com/syntaxerror247"
+  media: "text_edit_touch_support.webp"
