@@ -32,3 +32,27 @@ text_edit_touch_support:
     - name: "Anish Kumar"
       link: "https://github.com/syntaxerror247"
   media: "text_edit_touch_support.webp"
+
+visual_shader_node_groups:
+  title: VisualShader Node Groups
+  subtitle: subtitle
+  text: |
+    Hello World
+  read_more: "/"
+  contributors:
+    - name: "Hendrik Brucker"
+      link: "https://github.com/Geometror"
+  media: "visual_shader_node_groups.webm"
+  poster: "visual_shader_node_groups_poster.webp"
+
+texture_streaming:
+  title: Texture mip-level streaming
+  subtitle: subtitle
+  text: |
+    Hello World
+  read_more: "/"
+  contributors:
+    - name: "Trevor Davenport"
+      link: "https://github.com/tdaven"
+  media: "texture_streaming.webm"
+  poster: "texture_streaming_poster.webp"
