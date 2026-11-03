@@ -17,10 +17,10 @@ fuzzy_search:
     Hello World
   read_more: "/"
   contributors:
-    - name: "Adam Johnston"
-      link: "https://github.com/a-johnston"
-  media: "fuzzy_search.webm"
-  poster: "fuzzy_search_poster.webp"
+    - name: Adam Johnston
+      link: https://github.com/a-johnston
+  media: fuzzy_search.webm
+  poster: fuzzy_search_poster.webp
 
 text_edit_touch_support:
   title: Text edit touch support
@@ -29,9 +29,9 @@ text_edit_touch_support:
     Hello World
   read_more: "/"
   contributors:
-    - name: "Anish Kumar"
-      link: "https://github.com/syntaxerror247"
-  media: "text_edit_touch_support.webp"
+    - name: Anish Kumar
+      link: https://github.com/syntaxerror247
+  media: text_edit_touch_support.webp
 
 visual_shader_node_groups:
   title: VisualShader Node Groups
@@ -40,10 +40,10 @@ visual_shader_node_groups:
     Hello World
   read_more: "/"
   contributors:
-    - name: "Hendrik Brucker"
-      link: "https://github.com/Geometror"
-  media: "visual_shader_node_groups.webm"
-  poster: "visual_shader_node_groups_poster.webp"
+    - name: Hendrik Brucker
+      link: https://github.com/Geometror
+  media: visual_shader_node_groups.webm
+  poster: visual_shader_node_groups_poster.webp
 
 texture_streaming:
   title: Texture mip-level streaming
@@ -52,7 +52,58 @@ texture_streaming:
     Hello World
   read_more: "/"
   contributors:
-    - name: "Trevor Davenport"
-      link: "https://github.com/tdaven"
-  media: "texture_streaming.webm"
-  poster: "texture_streaming_poster.webp"
+    - name: Trevor Davenport
+      link: https://github.com/tdaven
+  media: texture_streaming.webm
+  poster: texture_streaming_poster.webp
+
+openxr_spatial_container:
+  title: OpenXR Spatial Container integration
+  subtitle: subtitle
+  text: |
+    Godot 4.8 grows in XR capabilities with the integration of the new [OpenXR Spatial Containers extension](https://www.khronos.org/blog/openxr-spatial-containers): Spatial containers are system-managed spaces in which applications can display XR content, similar to how traditional applications draw 2D content within windows on a desktop.
+
+    This new set of APIs evolves how XR applications are used and interacted with to allow for multiple multi-tasking and co-existing spatial contents. 
+    In addition, the new capabilities lower the barrier of entry for developers to build new spatial apps and games, or port existing ones. Which is exactly what the Godot team, in collaboration with Blender Studio, did by porting Project Dogwalk.
+
+  read_more: "/"
+  contributors:
+    - name: Fredia Huya-Kouadio
+      link: https://github.com/m4gr3d
+  media: openxr_spatial_container.webm
+  poster: openxr_spatial_container_poster.webp
+
+android_sdk_manager:
+  title: Automate Android & Java SDK setup
+  subtitle: subtitle
+  text: |
+    For developers targeting the Android platform, setting up and configuring the Android and Java SDK dependencies has been a much common and much reviled pain point.
+    Well fear no more! Godot 4.8 introduces the Android SDK manager, which is used to automate the download, setup and management of the Android and Java SDK directly in the Godot editor.
+  read_more: https://github.com/godotengine/godot/pull/121849
+  contributors:
+    - name: Fredia Huya-Kouadio
+      link: https://github.com/m4gr3d
+  media: android_sdk_manager.webp
+
+deprecated_properties:
+  title: Show inspector warning on deprecated properties
+  subtitle: subtitle
+  text: |
+    Hello World
+  read_more: "/"
+  contributors:
+    - name: Tomasz Chabora
+      link: https://github.com/KoBeWi
+  media: deprecated_properties.webp
+
+symbol_renaming:
+  title: Add simple symbol renaming
+  subtitle: subtitle
+  text: |
+    Hello World
+  read_more: "https://github.com/godotengine/godot/pull/117949"
+  contributors:
+    - name: Tomasz Chabora
+      link: https://github.com/KoBeWi
+  media: symbol_renaming.webm
+  poster: symbol_renaming_poster.webp
